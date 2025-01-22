@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Assets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .banner {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      background-color: #f1f1f1;
+      border-top: 2px solid #ccc;
+    }
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 1em;
+      cursor: pointer;
+      border-right: 1px solid #ccc;
+      text-decoration: none;
+      color: black;
+    }
+    .tab:last-child {
+      border-right: none;
+    }
+    .tab:hover {
+      background-color: #ddd;
+    }
+    .tab.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .dropdown {
+      margin-bottom: 20px;
+    }
+    .dropdown select {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+    }
+    .content {
+      text-align: center;
+    }
+    .map-image {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+    .json-box {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      overflow: auto;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    MAPwise
+  </div>
+
+  <div class="tabs">
+    <a href="index.html" class="tab">Home</a>
+    <a href="explore.html" class="tab active">Explore</a>
+  </div>
+
+  <div class="container">
+    <!-- Region Dropdown -->
+    <div class="dropdown">
+      <label for="region-select">Select Region:</label>
+      <select id="region-select" onchange="updateSubCategories()">
+        <option value="india">India</option>
+        <option value="china">China</option>
+        <option value="usa">USA</option>
+        <option value="counter_factuals">Counter Factuals</option>
+      </select>
+    </div>
+
+    <!-- Sub-category Dropdown -->
+    <div class="dropdown">
+      <label for="subcategory-select">Select Category:</label>
+      <select id="subcategory-select" onchange="updateContent()">
+        <!-- Options will be populated dynamically -->
+      </select>
+    </div>
+
+    <!-- Content Display -->
+    <div id="content-area" class="content">
+      <p>Select a region and category to view the map and data.</p>
+    </div>
+  </div>
+
+  <script>
+    // Define the asset structure
+    const assets = {
+      india: ['hatched', 'with_annotations', 'wo_annotations'],
+      china: ['hatched', 'with_annotations', 'wo_annotations'],
+      usa: ['hatched', 'with_annotations', 'wo_annotations'],
+      counter_factuals: ['orginal', 'shuffled names', 'jumbled values', 'imaginary names']
+    };
+
+    // Update subcategories dropdown based on the selected region
+    function updateSubCategories() {
+      const region = document.getElementById('region-select').value;
+      const subcategorySelect = document.getElementById('subcategory-select');
+      
+      // Clear existing options
+      subcategorySelect.innerHTML = '';
+
+      // Populate subcategories
+      assets[region].forEach(subcategory => {
+        const option = document.createElement('option');
+        option.value = subcategory;
+        option.textContent = subcategory;
+        subcategorySelect.appendChild(option);
+      });
+
+      // Update content area
+      updateContent();
+    }
+
+    // Update content (map and JSON data) based on region and subcategory
+    async function updateContent() {
+      const region = document.getElementById('region-select').value;
+      const subcategory = document.getElementById('subcategory-select').value;
+      const contentArea = document.getElementById('content-area');
+
+      // Construct file paths
+      const mapPath = `assets/${region}/${subcategory}/map.png`;
+      const jsonPath = `assets/${region}/${subcategory}/data.json`;
+    
+      console.log(jsonPath);
+      // Clear content area
+      contentArea.innerHTML = '';
+
+      // Create image element for the map
+      const img = document.createElement('img');
+      img.src = mapPath;
+      img.alt = `${region} ${subcategory} map`;
+      img.className = 'map-image';
+      contentArea.appendChild(img);
+
+      // Fetch and display JSON data
+      try {
+        const response = await fetch(jsonPath);
+        if (!response.ok) throw new Error('JSON file not found.');
+        const jsonData = await response.json();
+
+        const jsonBox = document.createElement('div');
+        jsonBox.className = 'json-box';
+        jsonBox.textContent = JSON.stringify(jsonData, null, 2); // Format JSON data
+        contentArea.appendChild(jsonBox);
+      } catch (error) {
+        const errorBox = document.createElement('p');
+        errorBox.textContent = 'Error loading JSON data: ' + error.message;
+        contentArea.appendChild(errorBox);
+      }
+    }
+
+    // Initialize dropdowns
+    updateSubCategories();
+  </script>
+</body>
+</html>

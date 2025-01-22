@@ -1,0 +1,110 @@
+[
+{
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 43,
+        "question": "Rank the states: Punjab, Assam and Kerala in terms of the legend value.",
+        "ground_truth": "Kerala < Punjab < Assam",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 19,
+        "question": "Yes or no: the value of the state Telangana is similar to Andhra Pradesh.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 33,
+        "question": "Yes or no: Bihar and Uttar Pradesh are a pair of bordering states with the highest difference.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 15,
+        "question": "List the states bordering Pakistan with the lowest value.",
+        "ground_truth": "Gujarat",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 34,
+        "question": "Yes or no: Odisha is the eastern-most state that has a similar value compared to all its neighbours.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 18,
+        "question": "Yes or no: the value of West Bengal is similar to its neighbouring state Bihar.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 9,
+        "question": "Does Uttarakhand fall in the range 76.0 - 97.0?",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 41,
+        "question": "Are the legends evenly spaced?",
+        "ground_truth": "No",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "hatched",
+        "map_no": "map7_7D",
+        "map_path": "/uufs/chpc.utah.edu/common/home/u1471428/mapwise/dataset/india/hatched/map7_7D.png",
+        "template_no": 38,
+        "question": "Yes or no: the value of Odisha is below the median value amongst states in which Godavari flows.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    }
+]
