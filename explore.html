@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Providing a New Benchmark for evaluating Vision-Language Models for Advanced Map Queries">
+    content="Providing a New Benchmark for evaluating Vision-Language Models for Advanced Map Queries">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MAPWise: New BenchMark for Advanced Map based Queries</title>
@@ -22,15 +23,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -40,6 +39,7 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
   <script>
@@ -49,11 +49,11 @@
       usa: ["hatched"],
       counter_factuals: ["orgs", "shuff", "jumb", "img"],
     };
-  
+
     function updateSubCategories() {
       const region = document.getElementById("region-select").value;
       const subCategorySelect = document.getElementById("sub-category-select");
-  
+
       subCategorySelect.innerHTML = '<option value="" disabled selected>Select a sub-category</option>';
       if (region && subCategoryMap[region]) {
         subCategoryMap[region].forEach((subCategory) => {
@@ -64,20 +64,20 @@
         });
       }
     }
-  
+
     function loadAssets() {
       const region = document.getElementById("region-select").value;
       const subCategory = document.getElementById("sub-category-select").value;
-  
+
       if (region && subCategory) {
         const imgPath = `assets/${region}/${subCategory}/map.png`;
         const jsonPath = `assets/${region}/${subCategory}/data.json`;
-  
+
         // Load image
         const mapImage = document.getElementById("map-image");
         mapImage.src = imgPath;
         mapImage.style.display = "block";
-  
+
         // Load JSON data
         fetch(jsonPath)
           .then((response) => response.json())
@@ -93,72 +93,70 @@
     }
   </script>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MAPWise: Evaluating Vision-Language Models for Advanced Map Queries</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="srija.mukhopadhyay@research.iiit.ac.in">Srija Mukhopadhyay</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://abhishekrajgaria.github.io/">Abhishek Rajgaria</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://preranakh.github.io/">Prerana Khatiwada</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.iiit.ac.in/people/faculty/m.shrivastava/">Manish Shrivastava</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://vgupta123.github.io/">Vivek Gupta</a><sup>4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cis.upenn.edu/~danroth/">Dan Roth</a><sup>5</sup>,
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>IIIT Hyderabad,</span>
-            <span class="author-block"><sup>2</sup>University of Utah,</span>
-            <span class="author-block"><sup>3</sup>University of Delaware,</span>
-            <span class="author-block"><sup>4</sup>Arizona State University,</span>
-            <span class="author-block"><sup>5</sup>University of Pennsylvania</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-
-              <!-- Home -->
-              <span class="link-block">
-                <a href="index.html"
-                   class="external-link button is-normal is-rounded is-dark">
-                  
-                  <span>Home</span>
-                </a>
+            <h1 class="title is-1 publication-title">MAPWise: Evaluating Vision-Language Models for Advanced Map Queries
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="srija.mukhopadhyay@research.iiit.ac.in">Srija Mukhopadhyay</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://abhishekrajgaria.github.io/">Abhishek Rajgaria</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://preranakh.github.io/">Prerana Khatiwada</a><sup>3</sup>,
               </span>
+              <span class="author-block">
+                <a href="https://www.iiit.ac.in/people/faculty/m.shrivastava/">Manish Shrivastava</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://vgupta123.github.io/">Vivek Gupta</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cis.upenn.edu/~danroth/">Dan Roth</a><sup>5</sup>,
+              </span>
+            </div>
 
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2409.00255"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>IIIT Hyderabad,</span>
+              <span class="author-block"><sup>2</sup>University of Utah,</span>
+              <span class="author-block"><sup>3</sup>University of Delaware,</span>
+              <span class="author-block"><sup>4</sup>Arizona State University,</span>
+              <span class="author-block"><sup>5</sup>University of Pennsylvania</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Home -->
+                <span class="link-block">
+                  <a href="index.html" class="external-link button is-normal is-rounded is-dark">
+
+                    <span>Home</span>
+                  </a>
+                </span>
+
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2409.00255" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2409.00255"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.00255" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -167,87 +165,90 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. Will be edited with new Repo Link -->
-              <span class="link-block">
-                <a href="https://github.com/abhishekrajgaria/Mapwise"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <!-- Code Link. Will be edited with new Repo Link -->
+                <span class="link-block">
+                  <a href="https://github.com/abhishekrajgaria/Mapwise"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Code</span>
                   </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/abhishekrajgaria/Mapwise/tree/main/dataset"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/abhishekrajgaria/Mapwise/tree/main/dataset"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fa fa-map"></i>
-                  </span>
-                  <span>Data</span>
+                    </span>
+                    <span>Data</span>
                   </a>
-              </span>
-              
-            </div>
+                </span>
 
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
+  <section class="section">
+    <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="field has-text-centered">
-          <label class="label">Select Region</label>
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select id="region-select" onchange="updateSubCategories()">
-            <option value="" disabled selected>Select a region</option>
-            <option value="india">India</option>
-            <option value="china">China</option>
-            <option value="usa">USA</option>
-            <option value="counter_factuals">Counter Factuals</option>
-          </select>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="field has-text-centered">
+            <label class="label">Select Region</label>
+
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="region-select" onchange="updateSubCategories()">
+                  <option value="" disabled selected>Select a region</option>
+                  <option value="india">India</option>
+                  <option value="china">China</option>
+                  <option value="usa">USA</option>
+                  <option value="counter_factuals">Counter Factuals</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field has-text-centered">
+            <label class="label">Select Sub-Category</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="sub-category-select" onchange="loadAssets()">
+                  <option value="" disabled selected>Select a sub-category</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="field has-text-centered">
-      <label class="label">Select Sub-Category</label>
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select id="sub-category-select" onchange="loadAssets()">
-            <option value="" disabled selected>Select a sub-category</option>
-          </select>
+
+
+
+
+
+
+
+
+      <div class="columns is-centered">
+
+
+        <div class="column">
+          <img id="map-image" alt="Map will appear here" style="display: none; margin-top: 20px;" />
+        </div>
+
+        <div class="column">
+          <pre id="json-output" style="display: none; margin-top: 20px;"></pre>
         </div>
       </div>
+
     </div>
-
-    <div id="output" class="has-text-centered">
-      
-      
-    </div>
-      </div>
-    </div>
-
-    
-    <div class="columns is-centered">
-      
-
-      <div class="column">
-        <img id="map-image" alt="Map will appear here" style="display: none; margin-top: 20px;" />
-      </div>
-
-      <div class="column">
-        <pre id="json-output" style="display: none; margin-top: 20px;"></pre>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
