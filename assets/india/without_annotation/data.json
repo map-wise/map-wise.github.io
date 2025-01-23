@@ -1,0 +1,122 @@
+[
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 16,
+        "question": "Between which two legend markings does Madhya Pradesh fall in?",
+        "ground_truth": ">4000",
+        "ground_truth_type": "Range",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 43,
+        "question": "Rank the states: Karnataka, Odisha and Goa in terms of the legend value.",
+        "ground_truth": "Goa < Odisha < Karnataka",
+        "ground_truth_type": "List",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 27,
+        "question": "Which states bordering Pakistan have a value similar to Odisha?",
+        "ground_truth": "Gujarat",
+        "ground_truth_type": "List",
+        "c_or_d": "c",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 20,
+        "question": "Name the N-most state that has a similar value compared to all its neighbours.",
+        "ground_truth": "Jammu & Kashmir",
+        "ground_truth_type": "Single",
+        "c_or_d": "c",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 15,
+        "question": "List the states in the east coast with the highest value.",
+        "ground_truth": "Andhra Pradesh",
+        "ground_truth_type": "List",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 36,
+        "question": "Name the southern-most state with values in range 500 - 1000.",
+        "ground_truth": "Tamil Nadu",
+        "ground_truth_type": "Single",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 42,
+        "question": "Yes/No: Assam has a similar value to Tripura, and also have a lower value than Mahrashtra.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 31,
+        "question": "Yes or no: a majority of states in north-east region have values less than 1000.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 7,
+        "question": "Is the legend continuous or discrete?",
+        "ground_truth": "Continuous",
+        "ground_truth_type": "Single",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "wo_annotations",
+        "map_no": "map9_2C",
+        "map_path": "../dataset/india/wo_annotations/map9_2C.png",
+        "template_no": 26,
+        "question": "Which states bordering Kerala have a value lower than 1000?",
+        "ground_truth": "Tamil Nadu",
+        "ground_truth_type": "List",
+        "c_or_d": "c",
+        "relative_region": "Y"
+    }
+]
