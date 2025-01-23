@@ -1,0 +1,110 @@
+[
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 31,
+        "question": "Yes or no: All the states bodering Mississippi belong to range 119-160.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 37,
+        "question": "Which state borders only states from range 161-193?",
+        "ground_truth": "South Carolina",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 3,
+        "question": "What is the overall range of the legend?",
+        "ground_truth": "119-293",
+        "ground_truth_type": "Range",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 7,
+        "question": "Is the legend discrete or continuous?",
+        "ground_truth": "Discrete",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 9,
+        "question": "Does state Texas fall in range 161-193?",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 27,
+        "question": "Which states bordering Nevada have a value higher than state Idaho?",
+        "ground_truth": "California, Oregon",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 18,
+        "question": "Yes or no: the value of the state Alabama is similar to its neighbouring state Tennessee.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 40,
+        "question": "Which states on the west coast belonging to the highest range are neighbouring each other?",
+        "ground_truth": "California, Oregon, Washington",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "usa",
+        "map_type": "hatched",
+        "map_no": "map_33",
+        "map_path": "../dataset/usa/hatched/map_33.png",
+        "template_no": 43,
+        "question": "Rank the states Michigan, Ohio, and Pennsylvania in terms of the legend value in the Great Lakes region?",
+        "ground_truth": "Michigan < Ohio = Pennsylvania",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    }
+]

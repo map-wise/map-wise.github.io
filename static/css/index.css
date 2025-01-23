@@ -155,3 +155,9 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.custom-hero {
+  background-color: #f5f5dc; /* Cream color */
+  color: #333; /* Optional: Text color for contrast */
+}
+
