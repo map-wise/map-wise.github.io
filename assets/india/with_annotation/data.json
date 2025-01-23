@@ -1,0 +1,122 @@
+[
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 5,
+        "question": "Yes or no: the legend has different shades of the same colour?",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 18,
+        "question": "Yes or no: the value of Goa is higher than its neighbouring state Karnataka.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 16,
+        "question": "Between which two legend markings does Arunachal Pradesh fall in?",
+        "ground_truth": "4,647.33 - 34,472.0",
+        "ground_truth_type": "Range",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 7,
+        "question": "Is the legend discrete or continuous?",
+        "ground_truth": "Discrete",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 37,
+        "question": "Which state bordering Pakistan borders at least 2 states from range 1,361,968.33 - 13,978,608.0?",
+        "ground_truth": "Rajasathan",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 17,
+        "question": "Count the states bordering Bhutan with the values in range below 34,472.0.",
+        "ground_truth": "2",
+        "ground_truth_type": "Count",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 3,
+        "question": "What is the overall range of the legend?",
+        "ground_truth": "14.99 - 13,978,608.0",
+        "ground_truth_type": "Range",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 20,
+        "question": "Name the eastern-most state that has a different value compared to all its neighbours.",
+        "ground_truth": "Assam",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 27,
+        "question": "Which states in the west coast have a value similar to Odisha?",
+        "ground_truth": "Karnataka, Maharashtra",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "india",
+        "map_type": "with_annotations",
+        "map_no": "map3_1D",
+        "map_path": "../dataset/india/with_annotations/map3_1D.png",
+        "template_no": 36,
+        "question": "Name the W-most state in the highest range.",
+        "ground_truth": "Gujarat",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    }
+]
