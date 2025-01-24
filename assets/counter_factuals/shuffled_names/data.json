@@ -1,0 +1,26 @@
+[
+    {
+        "country": "shuff",
+        "map_type": "with_annotations",
+        "map_no": "map_30",
+        "map_path": "../dataset/counter_factuals/shuff/shuff_maps//map_30.png",
+        "template_no": 35,
+        "question": "How many states in the east belongs to highest range ?",
+        "ground_truth": "2",
+        "ground_truth_type": "Count",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "shuff",
+        "map_type": "with_annotations",
+        "map_no": "map_30",
+        "map_path": "../dataset/counter_factuals/shuff/shuff_maps//map_30.png",
+        "template_no": 11,
+        "question": "Which states bordering the Great Lakes belong to the range 74400-93200?",
+        "ground_truth": "Illinois",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    }
+]

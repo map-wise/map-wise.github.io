@@ -1,0 +1,122 @@
+[
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 6,
+        "question": "Yes or no: the map depicts percentages.",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 41,
+        "question": "Are the legends evenly spaced?",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Single",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 3,
+        "question": "What is the overall range of the legend?",
+        "ground_truth": "<-10 - >50",
+        "ground_truth_type": "Range",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 7,
+        "question": "Is the legend discrete or continuous?",
+        "ground_truth": "Continuous",
+        "ground_truth_type": "Single",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 40,
+        "question": "Which pair of states belonging to the lowest range are the closest to each other?",
+        "ground_truth": "Tibet, Qinghai",
+        "ground_truth_type": "List",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 35,
+        "question": "How many states bordering Russia have a value similar to Tibet?",
+        "ground_truth": "0",
+        "ground_truth_type": "Count",
+        "c_or_d": "c",
+        "relative_region": "Y"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 30,
+        "question": "Does Qinghai have the same value as Jilin?",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 4,
+        "question": "What value range does the darkest shade represent?",
+        "ground_truth": ">50",
+        "ground_truth_type": "Range",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 2,
+        "question": "Yes or no: in the legend the colour intensity is directly proportional to the value.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "wo_annotations",
+        "map_no": "map6_0C",
+        "map_path": "../dataset/china/wo_annotations/map6_0C.png",
+        "template_no": 5,
+        "question": "Yes or no: the legend has different shades of the same colour?",
+        "ground_truth": "No",
+        "ground_truth_type": "Binary",
+        "c_or_d": "c",
+        "relative_region": "N"
+    }
+]

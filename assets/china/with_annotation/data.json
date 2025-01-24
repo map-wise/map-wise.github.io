@@ -1,0 +1,122 @@
+[
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 23,
+        "question": "How many states in the northeast region have a value lower than 457.82?",
+        "ground_truth": "2",
+        "ground_truth_type": "Count",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 13,
+        "question": "Which coastal state has the highest value?",
+        "ground_truth": "Guangdong, Shandong, Jiangsu",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 1,
+        "question": "How many distinct categories does the legend contain?",
+        "ground_truth": "7",
+        "ground_truth_type": "Count",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 15,
+        "question": "List the state in the South China region with the highest value.",
+        "ground_truth": "Guangdong",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 41,
+        "question": "Are the legends evenly spaced?",
+        "ground_truth": "No",
+        "ground_truth_type": "Single",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 16,
+        "question": "What value range does Yunnan fall in?",
+        "ground_truth": "972.54 - 1422.14",
+        "ground_truth_type": "Range",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 43,
+        "question": "Rank the states Henan, Shanxi and Shaanxi in terms of the legend value.",
+        "ground_truth": "Henan > Shanxi > Shaanxi",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 27,
+        "question": "Which states in the north east region have a value similar to Chingqing?",
+        "ground_truth": "None",
+        "ground_truth_type": "List",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 35,
+        "question": "How many states bordering India have a value similar to Jilin?",
+        "ground_truth": "1",
+        "ground_truth_type": "Count",
+        "c_or_d": "d",
+        "relative_region": "N"
+    },
+    {
+        "country": "china",
+        "map_type": "with_annotations",
+        "map_no": "map11_8D",
+        "map_path": "../dataset/china/with_annotations/map11_8D.png",
+        "template_no": 34,
+        "question": "Yes or no: Guangdong is the South-most state that has a higher value compared to all its neighbours.",
+        "ground_truth": "Yes",
+        "ground_truth_type": "Binary",
+        "c_or_d": "d",
+        "relative_region": "Y"
+    }
+]
