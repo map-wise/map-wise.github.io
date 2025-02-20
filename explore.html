@@ -54,13 +54,22 @@
       const region = document.getElementById("region-select").value;
       const subCategorySelect = document.getElementById("sub-category-select");
 
-      subCategorySelect.innerHTML = '<option value="" disabled selected>Select a sub-category</option>';
+      // subCategorySelect.innerHTML = '<option value="" disabled selected>Select a sub-category</option>';
+      subCategorySelect.innerHTML = "";
+      
       if (region && subCategoryMap[region]) {
         subCategoryMap[region].forEach((subCategory) => {
           const option = document.createElement("option");
           option.value = subCategory;
           option.textContent = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
+          
+          if (subCategory === "with_annotation") {
+            option.selected = true;
+          }
+
           subCategorySelect.appendChild(option);
+
+          loadAssets();
         });
       }
     }
@@ -91,6 +100,11 @@
           });
       }
     }
+
+    window.onload = function () {
+      updateSubCategories();
+    };
+
   </script>
 
   <section class="hero custom-hero">
@@ -208,7 +222,7 @@
               <div class="select is-fullwidth">
                 <select id="region-select" onchange="updateSubCategories()">
                   <option value="" disabled selected>Select a region</option>
-                  <option value="india">India</option>
+                  <option value="india" selected>India</option>
                   <option value="china">China</option>
                   <option value="usa">USA</option>
                   <option value="counter_factuals">Counter Factuals</option>
@@ -222,7 +236,8 @@
             <div class="control">
               <div class="select is-fullwidth">
                 <select id="sub-category-select" onchange="loadAssets()">
-                  <option value="" disabled selected>Select a sub-category</option>
+                  <!-- <option value="" disabled selected>Select a sub-category</option> -->
+                  <!-- <option value="with_annotation" selected>With_annotation</option> -->
                 </select>
               </div>
             </div>
