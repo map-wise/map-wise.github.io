@@ -366,53 +366,31 @@
     </div>
   </section>
 
-  <!-- Human Baseline Section -->
+  
+
+  <!-- Results & Analysis Section -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-left">Human Baseline</h2>
+          <h2 class="title is-3 has-text-left">Results & Analysis</h2>
 
-          <!-- Human Evaluation Process -->
-
+          <!-- Models Used -->
+          <h3 class="title is-4 has-text-left">Models Evaluated</h3>
           <div class="content has-text-justified">
             <p>
-              <strong>Human Evaluation Process</strong>
+              We evaluated multiple Vision-Language Models (VLMs) on the <strong>MAPWise</strong> dataset. The models
+              included both <strong>closed-source</strong> and <strong>open-source</strong> multimodal models:
             </p>
-            <p>
-              To establish a baseline, we conducted a human evaluation of the MAPWise dataset. The evaluation included
-              <strong>450 randomly selected questions</strong> spanning three countries: USA, India, and China. These
-              questions were answered by <strong>three independent human annotators</strong> with expertise in map
-              interpretation and spatial reasoning. The annotators followed a <strong>majority voting system</strong> to
-              determine the final answers. The dataset included both discrete and continuous maps, covering various
-              answer types such as binary, list, ranking, and count-based questions.
-            </p>
+            <ul>
+              <li><strong>Closed-Source Models:</strong> GPT-4o, Gemini 1.5 Flash</li>
+              <li><strong>Open-Source Models:</strong> CogAgent, InternLM-XComposer2, Idefics 2, Qwen VL</li>
+            </ul>
 
-
-            <div class="columns is-centered">
-              <figure class="image">
-                <img src="assets/tables/human_baseline.png" alt="human baseline">
-                <figcaption class="has-text-centered"><em>Human Baseline</em></figcaption>
-              </figure>
-            </div>
-
-            <div class="columns is-centered">
-              <figure class="image">
-                <img src="assets/tables/majority_voting.png" alt="majority voting">
-                <figcaption class="has-text-centered"><em>Majority Voting</em></figcaption>
-              </figure>
-            </div>
-
-          </div>
-
-
-
-          <!-- Comparison: Human vs. Model Performance -->
+            <!-- Comparison: Human vs. Model Performance -->
 
           <div class="content has-text-justified">
-            <p>
-              <strong>Comparison: Human vs. Model Performance</strong>
-            </p>
+            <h3 class="title is-4 has-text-left">Comparison: Human vs. Model Performance</h3>
             <p>
               Human evaluators consistently outperformed all Vision-Language Models (VLMs), particularly in
               <strong>reasoning-heavy tasks</strong> such as ranking and list-based questions. While human accuracy for
@@ -439,32 +417,10 @@
             </figure>
           </div>
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Results & Analysis Section -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-left">Results & Analysis</h2>
-
-          <!-- Models Used -->
-          <h3 class="title is-4 has-text-left">Models Evaluated</h3>
-          <div class="content has-text-justified">
-            <p>
-              We evaluated multiple Vision-Language Models (VLMs) on the <strong>MAPWise</strong> dataset. The models
-              included both <strong>closed-source</strong> and <strong>open-source</strong> multimodal models:
-            </p>
-            <ul>
-              <li><strong>Closed-Source Models:</strong> GPT-4o, Gemini 1.5 Flash</li>
-              <li><strong>Open-Source Models:</strong> CogAgent, InternLM-XComposer2, Idefics 2, Qwen VL</li>
-            </ul>
+          <h3 class="title is-4 has-text-left">In Depth Analysis</h3>
 
             <p>
-              Further analysis was conducted to evaluate <strong>closed-source model performance</strong>, the
+              We conducted thorough Analysis to evaluate <strong>closed-source model performance</strong>, the
               <strong>effectiveness of different prompting strategies</strong>, and <strong>biases in model
                 predictions</strong>. The study examined how models performed across different map types
               (<strong>discrete vs. continuous</strong>, <strong>colored vs. hatched</strong>), annotations
@@ -576,6 +532,54 @@
       scroll-snap-align: center;
     }
   </style>
+
+  <!-- Human Baseline Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Human Baseline</h2>
+
+          <!-- Human Evaluation Process -->
+
+          <div class="content has-text-justified">
+            <p>
+              <strong>Human Evaluation Process</strong>
+            </p>
+            <p>
+              To establish a baseline, we conducted a human evaluation of the MAPWise dataset. The evaluation included
+              <strong>450 randomly selected questions</strong> spanning three countries: USA, India, and China. These
+              questions were answered by <strong>three independent human annotators</strong> with expertise in map
+              interpretation and spatial reasoning. The annotators followed a <strong>majority voting system</strong> to
+              determine the final answers. The dataset included both discrete and continuous maps, covering various
+              answer types such as binary, list, ranking, and count-based questions.
+            </p>
+
+
+            <div class="columns is-centered">
+              <figure class="image">
+                <img src="assets/tables/human_baseline.png" alt="human baseline">
+                <figcaption class="has-text-centered"><em>Human Baseline</em></figcaption>
+              </figure>
+            </div>
+
+            <div class="columns is-centered">
+              <figure class="image">
+                <img src="assets/tables/majority_voting.png" alt="majority voting">
+                <figcaption class="has-text-centered"><em>Majority Voting</em></figcaption>
+              </figure>
+            </div>
+
+          </div>
+
+
+
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <section class="section">
