@@ -161,3 +161,37 @@ body {
   color: #333; /* Optional: Text color for contrast */
 }
 
+.carousel-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 100%;
+  display: none;
+}
+.carousel-item.active {
+  display: block;
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
