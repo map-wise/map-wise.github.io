@@ -387,28 +387,6 @@
               <li><strong>Open-Source Models:</strong> CogAgent, InternLM-XComposer2, Idefics 2, Qwen VL</li>
             </ul>
 
-            <!-- Comparison: Human vs. Model Performance -->
-
-          <div class="content has-text-justified">
-            <h3 class="title is-4 has-text-left">Comparison: Human vs. Model Performance</h3>
-            <p>
-              Human evaluators consistently outperformed all Vision-Language Models (VLMs), particularly in
-              <strong>reasoning-heavy tasks</strong> such as ranking and list-based questions. While human accuracy for
-              binary and direct extraction tasks was near-perfect (above <strong>95%</strong>), models struggled
-              significantly, with even the best-performing model (<strong>GPT-4o</strong>) achieving only
-              <strong>71.52%</strong> binary accuracy and much lower recall on list-based questions.
-            </p>
-            <p>
-              This stark contrast underscores the challenges faced by VLMs in tasks requiring <strong>advanced spatial
-                and numerical reasoning</strong>. Despite their sophisticated architectures, models exhibited biases,
-              hallucinations, and errors when extracting values from the legend. The significant performance gap between
-              humans and models highlights the need for advancements in <strong>multimodal learning techniques</strong>
-              and improved reasoning strategies to bridge this divide.
-            </p>
-
-
-
-          </div>
           <div class="columns is-centered">
             <figure class="image">
               <img src="assets/tables/human_vs_model.png" alt="Human vs Model Performance">
@@ -418,7 +396,6 @@
           </div>
 
           <h3 class="title is-4 has-text-left">In Depth Analysis</h3>
-
             <p>
               We conducted thorough Analysis to evaluate <strong>closed-source model performance</strong>, the
               <strong>effectiveness of different prompting strategies</strong>, and <strong>biases in model
@@ -428,6 +405,99 @@
               model accuracy was compared across various <strong>question-answer types</strong>, revealing significant
               gaps in spatial and numerical reasoning. For Complete Results, Please visit Appendix in <a href="https://arxiv.org/pdf/2409.00255">Paper</a>
             </p>
+
+            <div class="results-carousel">
+              <div class="results-card active">
+                <h4>MAPWise: A Challenging Benchmark</h4>
+                <p>The MAPWise dataset reveals a significant performance gap between current Vision-Language Models (VLMs) and human performance, especially on complex reasoning tasks (e.g., counting, listing). Existing VLMs have substantial limitations in reasoning abilities, highlighting the need for further research. The average gap is close to 50% on some task types.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Model Performance Comparison</h4>
+                  <p>GPT-4o consistently outperforms other models, followed by Gemini 1.5 Flash. Gemini excels with hatched maps due to better legend resolution, while GPT-4o is generally better due to stronger reasoning. Open-source models (Idefics2, InternLM) show promise but struggle with complex reasoning, particularly evident in QwenVL's low counting accuracy (4.26%). Both strong data extraction and sophisticated reasoning are crucial for geo-spatial understanding.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Prompt Effectiveness</h4>
+                  <p>Standard Chain-of-Thought (COT) prompting generally outperforms Explicit Extraction and Reasoning (EER), except for Gemini 1.5 Flash, which performs similarly with both. Gemini 1.5 Flash has strong instruction-following capabilities. Larger models implicitly use an EER-like approach, showing progress in reasoning. Smaller models struggle with EER's complexity.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Discrete vs. Continuous Maps</h4>
+                  <p>Models generally perform better on discrete maps than continuous maps, especially for counting and range extraction. Continuous maps pose challenges in legend range and color resolution. Models do better on single-word answers within the continuous category, possibly due to question simplicity.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Colored Maps vs. Hatched Maps</h4>
+                  <p>Models consistently perform better on colored maps than hatched maps, indicating a preference for colored data representation. Even GPT-4o shows significant performance drops on hatched maps. Idefics2 is the most robust to this map type.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Maps with and without annotations</h4>
+                  <p>Models perform similarly on maps with and without annotations. Sometimes, performance is *better* without annotations. Annotations are not a crucial factor for model performance in map understanding, though they can sometimes be beneficial.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Country-Wise Performance</h4>
+                  <p>Open-source models show consistent performance across countries (USA, India, China), while closed-source models exhibit greater variation. Potential training data biases may contribute to performance differences in closed-source models across different geographic regions.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Analysis across Question and Answer Types</h4>
+                  <p>Models excel at binary questions, followed by single-word answers (strong data extraction). Closed-source models do well on range questions. Counting and listing tasks are the most difficult, requiring complex reasoning, external knowledge, and geospatial understanding. These are challenging even for humans. Models struggle with most questions concerning relative regions, except for binary questions.</p>
+              </div>
+              
+              <div class="results-card">
+                  <h4>Comparison with Random Baselines</h4>
+                  <p>Some models (CogAgent, QwenVL) perform below random baselines on binary questions and list precision. This is due to irrelevant responses, repeated tokens, failure to generate valid responses, poor data processing, hallucination, and a lack of task comprehension. Examples show failures in value deduction and task understanding.</p>
+              </div>
+            
+              <div class="results-controls">
+                <button class="results-control-btn" onclick="moveResultsCard(-1)">&#10094;</button>
+                <button class="results-control-btn" onclick="moveResultsCard(1)">&#10095;</button>
+              </div>
+            
+              <div class="results-indicators">
+                <span class="indicator active" onclick="goToCard(0)"></span>
+                <span class="indicator" onclick="goToCard(1)"></span>
+                <span class="indicator" onclick="goToCard(2)"></span>
+                <span class="indicator" onclick="goToCard(3)"></span>
+                <span class="indicator" onclick="goToCard(4)"></span>
+                <span class="indicator" onclick="goToCard(5)"></span>
+                <span class="indicator" onclick="goToCard(6)"></span>
+                <span class="indicator" onclick="goToCard(7)"></span>
+                <span class="indicator" onclick="goToCard(8)"></span>
+              </div>
+            </div>
+  
+            <script>
+            let currentResultsCard = 0;
+            const resultsCards = document.querySelectorAll(".results-card");
+            const indicators = document.querySelectorAll(".indicator");
+            
+            function moveResultsCard(direction) {
+              resultsCards[currentResultsCard].classList.remove("active");
+              indicators[currentResultsCard].classList.remove("active");
+              
+              currentResultsCard = (currentResultsCard + direction + resultsCards.length) % resultsCards.length;
+              
+              resultsCards[currentResultsCard].classList.add("active");
+              indicators[currentResultsCard].classList.add("active");
+            }
+            
+            function goToCard(index) {
+              resultsCards[currentResultsCard].classList.remove("active");
+              indicators[currentResultsCard].classList.remove("active");
+              
+              currentResultsCard = index;
+              
+              resultsCards[currentResultsCard].classList.add("active");
+              indicators[currentResultsCard].classList.add("active");
+            }
+            
+            // Auto-advance carousel every 5 seconds
+            // setInterval(() => moveResultsCard(1), 5000);
+            </script>
           </div>
 
           <!-- Carousel for Results -->
@@ -487,8 +557,7 @@
               currentSlide = (currentSlide + direction + slides.length) % slides.length;
               slides[currentSlide].classList.add("active");
             }
-            </script>
-
+          </script>
 
           <h3 class="title is-4 has-text-left">Counterfactual Experiments</h3>
           <div class="content has-text-justified">
@@ -543,9 +612,7 @@
           <!-- Human Evaluation Process -->
 
           <div class="content has-text-justified">
-            <p>
-              <strong>Human Evaluation Process</strong>
-            </p>
+            <h3 class="title is-4 has-text-left">Human Evaluation Process</h3>
             <p>
               To establish a baseline, we conducted a human evaluation of the MAPWise dataset. The evaluation included
               <strong>450 randomly selected questions</strong> spanning three countries: USA, India, and China. These
@@ -570,12 +637,26 @@
               </figure>
             </div>
 
+            <!-- Comparison: Human vs. Model Performance -->
+
+            <div class="content has-text-justified">
+              <h3 class="title is-4 has-text-left">Comparison: Human vs. Model Performance</h3>
+              <p>
+                Human evaluators consistently outperformed all Vision-Language Models (VLMs), particularly in
+                <strong>reasoning-heavy tasks</strong> such as ranking and list-based questions. While human accuracy for
+                binary and direct extraction tasks was near-perfect (above <strong>95%</strong>), models struggled
+                significantly, with even the best-performing model (<strong>GPT-4o</strong>) achieving only
+                <strong>71.52%</strong> binary accuracy and much lower recall on list-based questions.
+              </p>
+              <p>
+                This stark contrast underscores the challenges faced by VLMs in tasks requiring <strong>advanced spatial
+                  and numerical reasoning</strong>. Despite their sophisticated architectures, models exhibited biases,
+                hallucinations, and errors when extracting values from the legend. The significant performance gap between
+                humans and models highlights the need for advancements in <strong>multimodal learning techniques</strong>
+                and improved reasoning strategies to bridge this divide.
+              </p>
+            </div>
           </div>
-
-
-
-          
-
         </div>
       </div>
     </div>
