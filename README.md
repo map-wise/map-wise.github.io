@@ -1,2 +1,3 @@
 # map-wise.github.io
-A website for exploring MAPwise insights and data
+
+Official website for the paper "MAPWise: Evaluating Vision-Language Models for Advanced Map Queries"
